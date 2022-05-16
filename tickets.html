@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This head section contains all the invisible information about the page -->
+<head>
+  <title>Theme park web site - Home</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is the fantastic theme park site.">
+  <meta name="author" content="Theme park content">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="refresh" content="600">
+  <meta name="keywords" content="Theme park">
+  <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+</head>
+
+<!-- This body section contains the structure for all the visble content -->
+<body>
+
+<header>
+    <object data="img/logo.svg" width="500px"> 
+    </object>    
+</header>
+
+<nav>
+    <div class="navbar">
+        <div class="guide">
+            <a href="index.html"><b><h2>Home</h2></b></a>
+            <a href="tickets.html"><b><h2>Tickets</h2></b></a>
+            <a href="info.html"><b><h2>Info</h2></b></a>
+        </div>
+    </div>
+</nav>
+
+<body>
+	<header role="banner">
+
+	</header>
+
+	<main role="main">
+
+        <div class="tic_title">
+            <h1>Tickets</h1>
+        </div>
+
+        <div class="tic_price">
+
+            <div class="tics">
+                <h2>Adults</h2>
+                <p>EUR 100</p>
+
+                <div class="tic_button">
+                    <div class="minus button">-</div>
+                    <input type="text" name="qty" id="1" value="0" class="input-filled">
+                    <div class="plus button">+</div>
+                </div>
+            </div>
+
+            <div class="tics">
+                <h2>Kids</h2>
+                <p>EUR 50</p>
+
+                <div class="tic_button">
+                    <div class="minus button">-</div>
+                    <input type="text" name="qty" id="2" value="0" class="input-filled">
+                    <div class="plus button">+</div>
+                </div>
+            </div>
+            </div>
+                <button class="buy_button" type="button" onclick="alert('You bought '+ document.getElementById('total').innerHTML +' tickets!')">Buy Tickets!</button>
+            </div>
+        </div>
+
+        <div class="tic_total">
+            <label for="name">Total tickets:</label>
+            <p id="total">0</p>
+        </div>
+
+        <script>
+            var plusButton = document.getElementsByClassName('plus');
+            var minusButton = document.getElementsByClassName('minus');
+            var totalTickets = 0;
+            for(var i = 0; i < plusButton.length; i++){         //PLUS BUTTON
+                var button = plusButton[i];
+                button.addEventListener('click',function(event){
+
+                    var buttonClicked = event.target;
+
+                    var input = buttonClicked.parentElement.children[1];
+                    var inputValue = input.value;
+                    var newValue = parseInt(inputValue) + 1;
+                    input.value = newValue;
+                    totalTickets += 1
+                    document.getElementById('total').innerHTML = totalTickets;
+                })
+            }
+
+            for(var i = 0; i < minusButton.length; i++){       //MINUS BUTTON
+                var button = minusButton[i];
+                button.addEventListener('click',function(event){
+
+                    var buttonClicked = event.target;
+
+                    var input = buttonClicked.parentElement.children[1];
+                    var inputValue = input.value;
+                    var newValue = parseInt(inputValue) - 1;
+                    if(newValue >=0){
+                        input.value =newValue;
+                        totalTickets -= 1
+                        document.getElementById('total').innerHTML = totalTickets;
+                    }
+                    else{
+                        input.value=0;
+                    }
+                })
+            }
+        </script>
+	</main>
+</body>
+
+<footer>
+    <link rel="stylesheet" href="index.css">
+        <div class="info">
+            <div class="vdisc">
+                <h4>Visit us at</h4>
+                <p class><small>Theme park address</small></p>
+            </div>
+            <div class="vdisc">
+                <h4>Open Hours</h4>
+                <p class><small>Mon to Fri <b>8:00 am to 8:00 pm</b></small></p>
+                <p class><small>Weekends <b>8:00 am to 10:00 pm</b></small></p>
+            </div>
+            <div class="vdisc">
+                <h4>Contact</h4>
+                <p class><small>+12 34 567 890</small></p>
+                <p class><small>Mon to Fri 9:00am to 5:00pm</small></p>
+            </div>
+        </div>
+  </footer>
+</html>
