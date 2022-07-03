@@ -11,21 +11,78 @@
     <meta name="refresh" content="600">
     <meta name="keywords" content="Theme park">
     <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <style>
+        /* css styling for page elements */
+        h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            animation-name: zoom-in-zoom-out;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        body{
+            background-color: rgb(242, 233, 244);
+        }
+        p{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+            animation-duration: 2s;
+            animation-name: slidein;
+            animation-timing-function: ease-out;
+        }
+        h3,  h4{
+            position:relative; 
+            left: 50px; 
+            top: 2px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        .pages{
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        /* css animations */
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 
-
 <header>
-    <object data="img/Themepark.svg" width="500px"> 
+    <object data="img/sunset logo.png" width="500px" id="logo"> 
     </object>    
 </header>
 
 <nav>
+    <!-- navbar and links to the other pages -->
     <div class="navbar">
         <div class="guide">
-            <a href="index.html"><b><h2>Home</h2></b></a>
-            <a href="tickets.html"><b><h2>Tickets</h2></b></a>
-            <a href="info.html"><b><h2>Info</h2></b></a>
+            <a href="index.html" class="pages"><b><h2>Home</h2></b></a>
+            <a href="tickets.html" class="pages"><b><h2>Tickets</h2></b></a>
+            <a href="info.html" class="pages"><b><h2>Info</h2></b></a>
         </div>
     </div>
 </nav>
@@ -72,9 +129,10 @@
 
         <div class="tic_total">
             <label for="name">Total tickets:</label>
-            <p id="total">0</p>
+            <h5 id="total">0</h5>
         </div>
 
+        <!-- script for the calculating the tickets number -->
         <script>
             var plusButton = document.getElementsByClassName('plus');
             var minusButton = document.getElementsByClassName('minus');
@@ -122,7 +180,9 @@
         <div class="info">
             <div class="vdisc">
                 <h4>Visit us at</h4>
-                <p class><small>Theme park address</small></p>
+                <p class="infotext"><small>Sunset Park</small></p>
+                <p class="infotext"><small>CB1 2EW</small></p>
+                <p class="infotext"><small>Paris, France</small></p>
             </div>
             <div class="vdisc">
                 <h4>Open Hours</h4>
@@ -135,5 +195,20 @@
                 <p class><small>Mon to Fri 9:00am to 5:00pm</small></p>
             </div>
         </div>
-  </footer>
+    </footer>
+
+<footer class="developer">
+
+    <!-- developers names and social media images that link to the respective website -->
+    <p> &copy;website developed by: 
+        <small> Yasmine Chakkour; Weijie Li; Miha Dolinar</small> 
+        <a href="https://www.instagram.com"> <img class="social-icon" src="/img/Instagram-Icon.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png">
+        </a>
+        <a href="https://www.twitter.com"> <img class="social-icon" src="/img/twitter-icon.png" alt="https://www.pngitem.com/middle/TTwiwRo_image-transparent-twitter-icon-png-png-download/">
+        </a>
+        <a href="https://www.facebook.com"> <img class="social-icon" src="/img/facebook-icon.jpg" alt="https://www.assistanceleague.org/las-vegas/thrift-shop/pngtree-facebook-icon-png-image_943697/">
+        </a>
+        </p>
+    </footer>
+
 </html>

@@ -1,7 +1,45 @@
+/* margin and padding size for the page elements */
 *{
-    margin:0;
+    margin:5;
     padding:0;
     box-sizing: border-box;
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* position, padding and margin for the youtube video */
+#rollercoaster-vid{
+    border: 1px solid black;
+    position: relative;
+    text-align: justify;
+    margin-top: 5px;
+    margin-left: 20%;
+}
+
+.centerImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 50%;
+    height: 50%;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-timing-function: ease-out;
+}
+
+/* determines the font color of the navigation */
+.pages{
+    color: rgb(240, 206, 58);
 }
 
 .tic_title{
@@ -46,9 +84,8 @@
     justify-content: flex-end;
     margin-right:100px;
     margin-bottom: 10px;
-    position: absolute;
-    left: 1200px;
-    top: 500px;
+    position: relative;
+    right: 32%;
 }
 
 .tics .tic_button {
@@ -71,7 +108,7 @@
 }
 
 .buy_button {
-    background-color: #1c03fa;
+    background-color: #0e0e0e;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -81,10 +118,9 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position: absolute;
-    left: 630px;
-    top: 500px;
-  }
+    position: relative;
+    margin-left: 45%;
+    }
 
 footer{
     background: rgb(253, 253, 253);
@@ -100,9 +136,21 @@ footer{
 .info .vdisc{
     align-content: center;
     justify-content: center;
-    padding: 10px;
+    padding: 50px;
 
 }
+
+footer p{
+    align-content: center;
+    margin-top: 20px;
+}
+
+.social-icon{
+    height: 2%;
+    width: 2%;
+    margin-left: 30px;
+}
+
 
 nav{
     background: rgb(255, 255, 255);
@@ -120,4 +168,9 @@ nav{
     padding:0 40px;
 }
 
+/* changes navbar color when the cursor hovers over it */
+.navbar a.selected, nav a:hover{
+    background-color: hsla(40,96%,57%,1);
+    color:hsla(323,87%,47%,1);
+}
 

@@ -11,49 +11,159 @@
     <meta name="refresh" content="600">
     <meta name="keywords" content="Theme park">
     <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <style>
+        /* css styling for page elements */
+        h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            animation-name: zoom-in-zoom-out;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+        }
+        p{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+            animation-duration: 2s;
+            animation-name: slidein;
+            animation-timing-function: ease-out;
+        }
+        h4{
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+        }
+        li{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 23px;
+        }
+        body{
+            background-color: rgb(242, 233, 244);
+        }
+        #headerImg{
+            width: 20%;
+            height: 80%;
+            animation-duration: 5s;
+            animation-name: fadeIn;
+            animation-timing-function: ease-out;
+        }
+        
+        /* css animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+    </style>
 </head>
 
 <header>
-    <object data="img/Themepark.svg" width="500px"> 
+    <!-- logo was created using the website: https://www.canva.com/ -->
+    <object data="img/sunset logo.png" width="600px" id="logo"> 
     </object>    
 </header>
 
 <nav>
+    <!-- navbar and links to the other pages -->
     <div class="navbar">
         <div class="guide">
-            <a href="index.html"><b><h2>Home</h2></b></a>
-            <a href="tickets.html"><b><h2>Tickets</h2></b></a>
-            <a href="info.html"><b><h2>Info</h2></b></a>
+            <a href="index.html" class="pages"><b><h2>Home</h2></b></a>
+            <a href="tickets.html" class="pages"><b><h2>Tickets</h2></b></a>
+            <a href="info.html" class="pages"><b><h2>Info</h2></b></a>
         </div>
     </div>
 </nav>
 
 <!-- This body section contains the structure for all the visble content -->
+
 <body>
-    <div id="fplinkArea">
-        <div class="introTitle">
-            <h2>Welcome to the Theme park.</h2>
-        </div>
-        <br/>
-        <div class="introText">
-            <p>Something about the Theme Park</p>
-        </div>
+    <div id="headerImg">
+        <img src="img\header photo1.jpg" alt="https://4kwallpapers.com/photography/ferris-wheel-silhouette-sunset-neon-lights-amusement-park-2161.html"/>
+    </div>
+    <div id="introTitle">
         <br/>
         <br/>
+        <h1>Welcome to the <i><b>Sunset</b></i> Theme park!</h1>
+    </div>
+    
+    <!-- code copied from the embed video option on youtube so the video appears on screen -->
+
+    <iframe id="rollercoaster-vid" width="1000" height="380" src="https://www.youtube.com/embed/h_lcZcBcQ0o?start=24" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+    align= "center"></iframe>
+    
+    <br/>
+    <div id="introText">
+        <p>The theme park that you will never forget,<br/>
+            from our thrilling Infinity roller coaster
+            to a colorful fairy wheel that you can enjoy <b><i>the sunset</i></b> from.
+        </p>
+    </div>
+    <br/>
+    <div id="bestRides">     
+        <h2>Best Rides</h2>
         <br/>
-            
-        <div class="bestRides">
-            <h2>Best Rides</h2>
+        <!-- used a list to organise the best rides paragraphs and images -->
+        <ul>
+            <li><b><i>The Infinity Roller Coaster</i></b></li>
             <br/>
-            <ol>
-                <li><b>Colossus</b></li>
-                <img src="img/img1.jpg" alt="jpg" width="600" height="300"/>
-                <li><b>Stealth</b></li>
-                <img src="img/img2.jpg" alt="jpg" width="600" height="300"/>
-                <li><b>Rumba Rapids</b></li>
-                <img src="img/img3.jpg" alt="jpg" width="600" height="300"/>
-            </ol>
-        </div>
+            <p>Our most famous ride "the infinity roller coaster" that fills you with infinite joy and 
+                thrill, <br/> most of our visitors ride it a second time, you down to beat that?</p>
+            <br/>
+            <img src="img\sunset rollercoaster 2.jpeg" alt="https://www.thejakartapost.com/travel/2020/03/31/virtual-theme-park-rides-you-can-experience-from-home.html" 
+            style="box-shadow: 15px 15px rgb(69, 68, 68);" class="centerImg" />
+            <br/>
+            <br/>
+            <br/>
+            <li><b><i>The Rainbow Wheel</i></b></li>
+            <br/>
+            <p>A colorful rainbow wheel, that will take you on a smooth ride while you enjoy the
+                city view.</p>
+            <br/>
+            <img src="img\rainbow fairywheel.png" alt="https://adventure.howstuffworks.com/destinations/theme-parks/10-classic-amusement-park-rides.htm" 
+            style="box-shadow: 15px 15px rgb(69, 68, 68);" class="centerImg" />
+            <br/>
+            <br/>
+            <br/>
+            <li><b><i>The swinger</i></b></li>
+            <br/>
+            <p>A classic swinging chairs ride that will get your heart beating and blood pumping so, 
+                hold on tight! </p>
+            <br/>
+            <img src="img\sunset swing ride.jpg" alt="https://www.booking.com/articles/the-best-european-theme-parks-for-young-wheelchair-users.vi.html" 
+            style="box-shadow: 15px 15px rgb(69, 68, 68);" class="centerImg"/>
+        </ol>
     </div>
 </body>
 
@@ -62,18 +172,35 @@
         <div class="info">
             <div class="vdisc">
                 <h4>Visit us</h4>
-                <p class><small>Theme park address</small></p>
+                <p class="infotext"><small>Sunset Park</small></p>
+                <p class="infotext"><small>CB1 2EW</small></p>
+                <p class="infotext"><small>Paris, France</small></p>
             </div>
             <div class="vdisc">
                 <h4>Open Hours</h4>
-                <p class><small>Mon to Fri <b>8:00 am to 8:00 pm</b></small></p>
-                <p class><small>Weekends <b>8:00 am to 10:00 pm</b></small></p>
+                <p class="infotext"><small>Mon to Fri <b>8:00 am to 8:00 pm</b></small></p>
+                <p class="infotext"><small>Weekends <b>8:00 am to 10:00 pm</b></small></p>
             </div>
             <div class="vdisc">
                 <h4>Contact</h4>
-                <p class><small>+12 34 567 890</small></p>
-                <p class><small>Mon to Fri 9:00am to 5:00pm</small></p>
+                <p class="infotext"><small>+12 34 567 890</small></p>
+                <p class="infotext"><small>Mon to Fri 9:00am to 5:00pm</small></p>
             </div>
         </div>
     </footer>
+
+<footer class="developer">
+
+        <!-- developers names and social media images that link to the respective website -->
+        <p> &copy;website developed by: 
+        <small> Yasmine Chakkour; Weijie Li; Miha Dolinar</small> 
+        <a href="https://www.instagram.com"> <img class="social-icon" src="/img/Instagram-Icon.png"  alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png">
+        </a>
+        <a href="https://www.twitter.com"> <img class="social-icon" src="/img/twitter-icon.png" alt="https://www.pngitem.com/middle/TTwiwRo_image-transparent-twitter-icon-png-png-download/">
+        </a>
+        <a href="https://www.facebook.com"> <img class="social-icon" src="/img/facebook-icon.jpg" alt="https://www.assistanceleague.org/las-vegas/thrift-shop/pngtree-facebook-icon-png-image_943697/">
+        </a>
+        </p>
+        </footer>
+
 </html>

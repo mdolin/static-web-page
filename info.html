@@ -3,49 +3,158 @@
 
 <!-- This head section contains all the invisible information about the page -->
 <head>
-  <title>Theme park web site - Home</title>
-  <meta charset="utf-8">
-  <meta name="description" content="This is the fantastic theme park site.">
-  <meta name="author" content="Theme park content">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="refresh" content="600">
-  <meta name="keywords" content="Theme park">
-  <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <title>Theme park web site - Home</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is the fantastic theme park site.">
+    <meta name="author" content="Theme park content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="600">
+    <meta name="keywords" content="Theme park">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <style>
+        /* css styling for page elements */
+        p{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+            animation-duration: 2s;
+            animation-name: slidein;
+            animation-timing-function: ease-out;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 23px;
+            animation-duration: 2s;
+            animation-name: zoom-in-zoom-out;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        h3,  h4{
+            position:relative; 
+            left: 50px; 
+            top: 2px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        h6{
+            position:relative; 
+            left: 50px; 
+            top: 2px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        body{
+            background-color: rgb(242, 233, 244);
+        }
+        .pages{
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        #developers{
+            text-align: right;
+        }
+
+        /* css animations */
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+    </style>
 </head>
 
 
 <header>
-    <object data="img/Themepark.svg" width="500px"> 
+    <object data="img/sunset logo.png" width="500px" id="logo"> 
     </object>    
 </header>
 
 <nav>
+    <!-- navbar and links to the other pages -->
     <div class="navbar">
         <div class="guide">
-            <a href="index.html"><b><h2>Home</h2></b></a>
-            <a href="tickets.html"><b><h2>Tickets</h2></b></a>
-            <a href="info.html"><b><h2>Info</h2></b></a>
+            <a href="index.html" class="pages"><b><h2>Home</h2></b></a>
+            <a href="tickets.html" class="pages"><b><h2>Tickets</h2></b></a>
+            <a href="info.html" class="pages"><b><h2>Info</h2></b></a>
         </div>
     </div>
 </nav>
+
+<!-- This body section contains the structure for all the visble content -->
+
+<body>
+    <!-- transportation and food info -->
+    <br/>
+    <br/>
+    <h1>Transportation</h1> <br/>
+        <p>there is a bus station right beside the park, the last bus of the day leaves at 12 am.</p>
+        <br/>
+        <!-- map image is an edited screenshot from google maps -->
+    <img src="img\bus map.jpg" alt="Park bus station map" class="centerImg"/>
+<br/>
+<br/>
+<h1>Food</h1>
+<p>we have a snacks bar that offers a variety of <i>mouth-watering</i> snacks, drinks, candy <br/>
+    and <i><b>the best</b></i> french fries.</p> 
+<br/>
+<br/>
+<img src="img\snacks bar.jpg" alt="https://sachartermoms.wordpress.com/2013/04/03/kiddie-park-picapica-new-south-side-indoors/" 
+class="centerImg"/>
+</body>
 
 <footer>
     <link rel="stylesheet" href="index.css">
         <div class="info">
             <div class="vdisc">
-                <h4>Visit us at</h4>
-                <p class><small>Theme park address</small></p>
+                <h4> Visit us at</h4>
+                <p class="infotext"><small>Sunset Park</small></p>
+                <p class="infotext"><small>CB1 2EW</small></p>
+                <p class="infotext"><small>Paris, France</small></p>
             </div>
             <div class="vdisc">
                 <h4>Open Hours</h4>
-                <p class><small>Mon to Fri <b>8:00 am to 8:00 pm</b></small></p>
-                <p class><small>Weekends <b>8:00 am to 10:00 pm</b></small></p>
+                <p class="infotext"><small>Mon to Fri <b>8:00 to 20:00</b></small></p>
+                <p class="infotext"><small>Weekends <b>8:00 to 22:00</b></small></p>
             </div>
             <div class="vdisc">
                 <h4>Contact</h4>
-                <p class><small>+12 34 567 890</small></p>
-                <p class><small>Mon to Fri 9:00am to 5:00pm</small></p>
+                <p class="infotext"><small>+12 34 567 890</small></p>
+                <p class="infotext"><small>Mon to Fri 9:00am to 5:00pm</small></p>
             </div>
+            
         </div>
-  </footer>
+    </footer>
+
+<footer class="developer">
+
+    <!-- developers names and social media images that link to the respective website -->
+    <p> &copy;website developed by: 
+        <small> Yasmine Chakkour; Weijie Li; Miha Dolinar</small> 
+        <a href="https://www.instagram.com"> <img class="social-icon" src="/img/Instagram-Icon.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png">
+        </a>
+        <a href="https://www.twitter.com"> <img class="social-icon" src="/img/twitter-icon.png" alt="https://www.pngitem.com/middle/TTwiwRo_image-transparent-twitter-icon-png-png-download/">
+        </a>
+        <a href="https://www.facebook.com"> <img class="social-icon" src="/img/facebook-icon.jpg" alt="https://www.assistanceleague.org/las-vegas/thrift-shop/pngtree-facebook-icon-png-image_943697/">
+        </a>
+        </p>
+</footer>
+
 </html>
